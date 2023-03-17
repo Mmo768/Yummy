@@ -1,0 +1,125 @@
+/* ========== start main-navbar ========= */
+.navPosition{
+    transform: translateX(-240px);
+}
+nav article:first-child{
+    width: 240px;
+}
+nav article:first-child div p{
+    font-size: 13px;
+}
+nav article:last-child{
+    width: 70px;
+    padding: 8px;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    transition: .3s 0s all linear;
+}
+nav a:hover{
+    color: #ff3d00 !important;
+}
+nav .closed{
+    cursor: pointer;
+}
+nav article >ul>li{
+    position: relative;
+    top: 100%;
+}
+@keyframes navAnime {
+    100%{
+        top: 0px;
+    }
+}
+.active{
+    color: #ff3d00 !important;
+}
+/* ========== end main-navbar ========= */
+
+
+/* ========== start section-one ========= */
+.main{
+    width: calc(100% - 70px);
+}
+.main .imageBox .details{
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 0;
+    transition: .3s 0s all linear;
+    overflow: hidden;
+}
+.main .imageBox:hover .details{
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 100%;
+}
+.imageBox,a,.cur{
+    cursor: pointer;
+}
+.alert-info{
+    color: #055160 !important;
+    background-color: #cff4fc !important;
+}
+.alert-danger{
+    background-color: #f8d7da !important;
+}
+.div-truncate{
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+/* ========== end section-one ========= */
+
+/* ========== start main-two ========= */
+.main input::placeholder{
+    color: #6c757d;
+}
+
+
+/* ========== end main-two ========= */
+
+
+
+/* ========== loading spinner ========= */
+.loader {
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    background: currentColor;
+    color: #FFF;
+    box-sizing: border-box;
+    animation: animloader 0.3s 0.3s linear infinite alternate;
+  }
+  
+  .loader::after, .loader::before {
+    content: '';
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    background: currentColor;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    box-sizing: border-box;
+    animation: animloader 0.3s  0.45s  linear infinite alternate;
+  }
+  .loader::before {
+    left: -20px;
+    animation-delay: 0s;
+  }
+  
+  @keyframes animloader {
+    0%   { height: 48px} 
+    100% { height: 4px}
+  }
+  .spinner{
+    /* background-color: #000; */
+    left: 70px;
+  }
+  /* ========== loading spinner ========= */
