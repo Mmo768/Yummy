@@ -50,7 +50,7 @@ export class Catalog{
                 <div class="imageBox text-center cur h-100" name="${data[i].strIngredient}">
                     <i class="fa-solid fa-drumstick-bite fa-4x text-white"></i>
                     <h3 class=" fs-25 lh-30 fw-500 text-white">${data[i].strIngredient}</h3>
-                    <p class="m-0 lh-25 fw-400 text-white">${data[i].strDescription?.split(" ").slice(0,20).join(" ")}</p>
+                    <p class="m-0 lh-25 fw-400 text-white">${data[i].strDescription?.split(" ").slice(0,15).join(" ")}</p>
                 </div>
             </div>`;
             };
