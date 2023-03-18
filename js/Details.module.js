@@ -38,7 +38,7 @@ export class Details{
                 </li>
                 <li class="fs-30 lh-35 fw-500">Tags : 
                     <ul>
-                        ${data.strTags!==null?'<li  class="d-inline-block text-danger alert-danger rounded-1 p-2 my-3 fw-300 fs-15 lh-15">'+data.strTags+'</li>':""}    
+                        ${this.strTags(data.strTags)}   
                     </ul>
                 </li>
                 <li class="mt-2">
@@ -62,5 +62,18 @@ export class Details{
         }
         return res;
     }
+    
+    strTags(data){
+        if(data !== null){
+            let res="";
+            let dataSplit = data.split(",");
+            for(let i=0 ; i<dataSplit.length ; i++){
+                res+=`<li  class="d-inline-block text-danger alert-danger  rounded-1 p-1 mx-1 my-1 fw-300 fs-15 lh-15">${dataSplit[i]}</li>`;
+            }
+            return res;
+        }else{
+            return "";
+        };
+    };
 
 }
